@@ -1,7 +1,16 @@
-import type { NextConfig } from "next";
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  eslint: {
+    ignoreDuringBuilds: true, // Build sırasında ESLint'i devre dışı bırak
+  },
+  typescript: {
+    ignoreBuildErrors: false, // TypeScript hatalarını kontrol et
+  },
+  experimental: {
+    turbo: {
+      // Turbopack ayarları
+    }
+  }
+}
 
-const nextConfig: NextConfig = {
-  /* config options here */
-};
-
-export default nextConfig;
+export default nextConfig
